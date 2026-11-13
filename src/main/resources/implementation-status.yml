@@ -1,0 +1,38 @@
+# Honest implementation audit. These entries describe source implementation, not proven in-game operation.
+release: 0.3.0-expanded-preview
+api: Paper 1.21.11
+java: 21
+build-verification:
+  java-syntax: parsed with JDK 21 compiler parser
+  yaml: parsed
+  full-gradle-compile: not performed
+  live-server-multiplayer: not tested
+counts:
+  passive-nodes-defined: 161
+  passive-nodes-enabled: 38
+  active-entries-defined: 33
+  active-entries-enabled: 26
+implemented-foundation:
+- 12 class selection, confirmation, profiles and kit assignments
+- Skill-tree browsing with costs, ranks, point validation, Engineer branch unlocks
+- Configurable active ability loadouts, cooldowns, and selected live handlers
+- Trust list with UUID-backed persistence and core player targeting checks
+- Advancement progress and same-opponent PvP kill anti-farming cooldowns
+- An Engineer workshop with craftable wrench tiers and node-gated entity display machines
+- Five Engineer machine categories (Medic, Regeneration, Ballistic, Explosive, Advanced) plus Experience
+  Infuser
+- Engineer-owned XP reserve deposits, confirmation-based gear repairs, and Infused gameplay effects
+- Selected live passives across multiple classes, as flagged in skillsets.yml
+- Custom Guardian Shield, Infinite TNT, Infusium, reset/refund tokens, starter-kit logic
+partial-or-pending:
+- Most passive nodes remain design-only (never silently purchasable).
+- Several class active abilities remain design-only and cannot be activated.
+- Engineer machine GUIs are functional previews, not finished animated 3D machine models.
+- Medical Launcher, Automated Repair Bench, Restoration Station and other specialized machines are not
+  implemented.
+- Turret behavior and damage are simple game prototypes with no full protection plugin integration.
+- Assassin stealth audio suppression and custom Infused status sprite require further work.
+- Potion trust checks do not cover all lingering clouds and custom damage sources.
+- Full skill tree node prerequisite chains not yet finalized for all 12 classes.
+- Potential exploit/balance issues and PvP edge cases require actual Paper server playtests.
+- No final customized recipe editor or custom model/resource pack included.
